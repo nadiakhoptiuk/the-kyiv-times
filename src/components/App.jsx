@@ -1,16 +1,17 @@
+import { Route, Routes } from 'react-router-dom';
+import HomeView from 'views/HomeView/HomeView';
+import PostView from 'views/PostView/PostView';
+import SharedLayout from './SharedLayout/SharedLayout';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      Start
+    <div className="page">
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<HomeView />} />
+          <Route path="/post" element={<PostView />} />
+        </Route>
+      </Routes>
     </div>
   );
 };
