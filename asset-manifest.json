@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/the-kyiv-times/static/css/main.857f6163.css",
+    "main.js": "/the-kyiv-times/static/js/main.a408f530.js",
+    "index.html": "/the-kyiv-times/index.html",
+    "main.857f6163.css.map": "/the-kyiv-times/static/css/main.857f6163.css.map",
+    "main.a408f530.js.map": "/the-kyiv-times/static/js/main.a408f530.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.857f6163.css",
+    "static/js/main.a408f530.js"
+  ]
+}
