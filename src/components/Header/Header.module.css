@@ -1,0 +1,8 @@
+.header {
+  height: 100px;
+  padding: 32px 0;
+  text-align: center;
+
+  background-color: var(--black-bg);
+  color: var(--white-bg-text);
+}

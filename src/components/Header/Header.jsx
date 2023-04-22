@@ -1,5 +1,7 @@
+import s from './Header.module.css';
+
 const Header = () => {
-  return <header>Welcome to The Kyiv Times!</header>;
+  return <header className={s.header}>The Kyiv Times</header>;
 };
 
 export default Header;
