@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 
 const Carousel = () => {
   const [swiperInstance, setSwiperInstance] = useState(null);
-  const { data, isFetching, error } = useGetAllPostsQuery('');
+  const { data } = useGetAllPostsQuery('');
 
   return (
     <>
