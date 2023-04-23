@@ -1,4 +1,5 @@
 import Carousel from 'components/Carousel/Carousel';
+import CreatePostBtn from 'components/CreatePostBtn/CreatePostBtn';
 import s from './HomeView.module.css';
 
 const HomeView = () => {
@@ -6,6 +7,8 @@ const HomeView = () => {
     <section className={s.homeViewSection}>
       <div className={`${s.homeViewContainer} container`}>
         <Carousel />
+
+        <CreatePostBtn />
       </div>
     </section>
   );
