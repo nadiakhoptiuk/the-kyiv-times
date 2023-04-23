@@ -13,7 +13,7 @@ const CreatePostModal = ({ open, onClose, title }) => {
     <Dialog
       onClose={onClose}
       open={open}
-      title="Please fill this form for new post"
+      title="Please fill form below:"
       aria-label="modal for create new post"
     >
       <DialogTitle sx={{ m: 0, p: 4, position: 'relative', fontSize: '24px' }}>
@@ -38,7 +38,7 @@ const CreatePostModal = ({ open, onClose, title }) => {
         ) : null}
       </DialogTitle>
 
-      <DialogContent dividers sx={{ px: 4 }}>
+      <DialogContent dividers sx={{ p: 4 }}>
         <CreatePostForm onClose={onClose} />
       </DialogContent>
     </Dialog>

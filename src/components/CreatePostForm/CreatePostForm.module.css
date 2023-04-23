@@ -4,8 +4,18 @@
 }
 
 .descriptionField {
-  padding: 8px;
+  padding: 12px;
 
   border: none;
   border-bottom: 1px solid grey;
+
+  resize: none;
+}
+
+.descriptionField::placeholder {
+  color: 'inherit';
+}
+
+.descriptionField:hover {
+  background-color: var(--bg-input-hover);
 }

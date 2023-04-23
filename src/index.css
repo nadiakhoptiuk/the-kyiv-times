@@ -27,6 +27,8 @@ body {
   margin: 0;
 
   font-family: 'Roboto', 'Playfair Display', sans-serif;
+  font-size: 20px;
+  line-height: 1.14;
   font-weight: 400;
 
   color: var(--black-bg);
@@ -41,6 +43,7 @@ body {
   --black-bg-transparent: rgba(26, 26, 26, 0.5);
   --white-bg-text: #e8eaee;
   --grey-border: #dad8d8;
+  --bg-input-hover: rgba(0, 0, 0, 0.09);
 }
 
 .container {
@@ -108,10 +111,22 @@ body {
 
   text-transform: initial !important;
   font-size: 20px !important;
-  font-weight: 300 !important;
+  font-weight: 500 !important;
 }
 
 .MuiDialog-paper {
   width: 700px;
   max-width: 700px !important;
+}
+
+.MuiDialogContent-root {
+  width: 700px;
+  max-width: 700px !important;
+
+  border-color: #1a1a1a49 !important;
+}
+
+.MuiInputBase-input::placeholder {
+  font-size: 20px !important;
+  color: var(--black-bg) !important;
 }

@@ -2,15 +2,16 @@ import { useForm, Controller } from 'react-hook-form';
 import { Button, TextField } from '@mui/material';
 import { useAddNewPostMutation } from 'redux/postsApi';
 import s from './CreatePostForm.module.css';
+import { useEffect } from 'react';
 
 const CreatePostForm = ({ onClose }) => {
-  const [addNewPost, { isLoading }] = useAddNewPostMutation();
+  const [addNewPost, { isLoading, isSuccess }] = useAddNewPostMutation();
   const {
     control,
     register,
     reset,
     handleSubmit,
-    formState: { errors },
+    // formState: { errors },
   } = useForm({
     defaultValues: { postTitle: '', description: '' },
   });
@@ -20,11 +21,15 @@ const CreatePostForm = ({ onClose }) => {
 
     addNewPost(data);
     reset();
+  };
+
+  useEffect(() => {
+    if (!isSuccess) return;
 
     setTimeout(() => {
       onClose();
     }, 500);
-  };
+  }, [isSuccess, onClose]);
 
   return (
     <>
@@ -36,8 +41,9 @@ const CreatePostForm = ({ onClose }) => {
             render={({ field }) => (
               <TextField
                 id="filled-basic"
-                label="Enter a post title..."
+                placeholder="Enter a post title..."
                 variant="filled"
+                color="inherit"
                 sx={{ mb: 2 }}
                 {...field}
               />
@@ -53,14 +59,16 @@ const CreatePostForm = ({ onClose }) => {
 
           <Button
             type="submit"
-            variant="text"
+            variant="contained"
             color="inherit"
             sx={{ marginTop: '30px', marginX: 'auto' }}
           >
-            Create
+            Create the post
           </Button>
         </form>
       ) : null}
+
+      {isSuccess && <p>The post has been succesfully created</p>}
     </>
   );
 };
