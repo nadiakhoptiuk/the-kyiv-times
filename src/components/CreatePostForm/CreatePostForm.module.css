@@ -1,0 +1,11 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.descriptionField {
+  padding: 8px;
+
+  border: none;
+  border-bottom: 1px solid grey;
+}
