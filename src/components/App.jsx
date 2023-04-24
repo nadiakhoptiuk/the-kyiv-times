@@ -9,7 +9,8 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomeView />} />
-          <Route path="/post" element={<PostView />} />
+
+          <Route path={`/posts/:postId`} element={<PostView />} />
         </Route>
       </Routes>
     </div>

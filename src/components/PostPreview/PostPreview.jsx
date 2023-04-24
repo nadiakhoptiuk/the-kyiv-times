@@ -1,15 +1,11 @@
 import { useState } from 'react';
-import {
-  CardActions,
-  // CardContent,
-  CardHeader,
-  Collapse,
-  // Collapse,
-} from '@mui/material';
+import { Link } from 'react-router-dom';
+import { CardActions, CardContent, CardHeader, Collapse } from '@mui/material';
 import Card from '@mui/material/Card';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandMore from './ExpandMore';
 import CommentsBlock from './CommentsBlock';
+import s from './PostPreview.module.css';
 
 const PostPreview = ({ post }) => {
   const { title, id } = post;
@@ -32,13 +28,17 @@ const PostPreview = ({ post }) => {
           title={title}
           sx={{
             textTransform: 'capitalize',
-            height: '115px',
+            height: '105px',
             alignItems: 'flex-start',
             pb: 0,
           }}
         />
 
-        <CardActions disableSpacing sx={{ p: 0 }}>
+        <CardActions disableSpacing sx={{ px: 2 }}>
+          <Link to={`/posts/${id}`} className={s.link}>
+            Learn More
+          </Link>
+
           <ExpandMore
             expand={expanded}
             onClick={handleExpandClick}
@@ -50,7 +50,9 @@ const PostPreview = ({ post }) => {
         </CardActions>
 
         <Collapse in={expanded} timeout="auto" unmountOnExit>
-          <CommentsBlock id={id} expanded={expanded} />
+          <CardContent sx={{ p: 0 }}>
+            <CommentsBlock id={id} height={'160px'} scroll={'scroll'} />
+          </CardContent>
         </Collapse>
       </Card>
     </>

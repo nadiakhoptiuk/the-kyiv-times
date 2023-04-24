@@ -8,7 +8,8 @@ import validationSchema from 'service/validationSchema';
 import Spinner from 'components/Spinner/Spinner';
 
 const CreatePostForm = ({ onClose }) => {
-  const [addNewPost, { isLoading, isSuccess }] = useAddNewPostMutation();
+  const [addNewPost, { isLoading, isSuccess, isFetching, isError }] =
+    useAddNewPostMutation();
   const {
     control,
     register,
@@ -37,7 +38,7 @@ const CreatePostForm = ({ onClose }) => {
 
   return (
     <>
-      {!isLoading && !isSuccess ? (
+      {!isLoading && !isSuccess && !isFetching ? (
         <form onSubmit={handleSubmit(onSubmit)} className={s.form}>
           <Controller
             control={control}
@@ -88,6 +89,23 @@ const CreatePostForm = ({ onClose }) => {
           }}
         >
           The post has been succesfully created!
+        </Alert>
+      )}
+
+      {isError && (
+        <Alert
+          variant="filled"
+          severity="error"
+          sx={{
+            position: 'absolute',
+            width: 'max-content',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            fontSize: 'inherit',
+          }}
+        >
+          Something went wrong! Please try later...
         </Alert>
       )}
     </>

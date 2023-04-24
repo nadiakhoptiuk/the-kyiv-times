@@ -1,0 +1,19 @@
+.postTitle {
+  margin-bottom: 60px;
+  text-align: center;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.postDescription {
+  max-width: 600px;
+  margin-bottom: 40px;
+
+  text-transform: capitalize;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}

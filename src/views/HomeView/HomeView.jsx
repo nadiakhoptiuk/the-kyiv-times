@@ -5,7 +5,9 @@ import { useGetAllPostsQuery } from 'redux/postsApi';
 import s from './HomeView.module.css';
 
 const HomeView = () => {
-  const { data, isLoading } = useGetAllPostsQuery('');
+  const { data, isLoading } = useGetAllPostsQuery('', {
+    refetchOnMountOrArgChange: true,
+  });
 
   return (
     <>

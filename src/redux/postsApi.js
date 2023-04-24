@@ -5,16 +5,25 @@ export const postsApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://jsonplaceholder.typicode.com',
   }),
-  tagTypes: ['Posts'],
+  tagTypes: ['Posts', 'Users'],
   endpoints: builder => ({
-    // getPokemonByName: builder.query({
-    //   query: name => `pokemon/${name}`,
-    // }),
     getAllPosts: builder.query({
       query: () => ({
         url: '/posts',
       }),
       providesTags: ['Posts'],
+    }),
+    getPostInfoById: builder.query({
+      query: id => ({
+        url: `/posts/${id}`,
+      }),
+      providesTags: ['Posts'],
+    }),
+    getUserById: builder.query({
+      query: userId => ({
+        url: `/users/${userId}`,
+      }),
+      providesTags: ['Users'],
     }),
     getCommentsByPostId: builder.query({
       query: id => ({
@@ -35,6 +44,8 @@ export const postsApi = createApi({
 
 export const {
   useGetAllPostsQuery,
-  useAddNewPostMutation,
+  useGetPostInfoByIdQuery,
+  useGetUserByIdQuery,
   useGetCommentsByPostIdQuery,
+  useAddNewPostMutation,
 } = postsApi;

@@ -3,3 +3,8 @@
   font-size: 20px;
   font-weight: normal;
 }
+
+.link {
+  text-decoration: none;
+  color: var(--accent-color-primary);
+}
