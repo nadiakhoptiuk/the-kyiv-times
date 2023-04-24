@@ -32,3 +32,5 @@ Modal window for creating new post:
 ![Modal window for creating new post](./assets/modal.jpg)
 
 Post Page: ![Post Page](./assets/postPage.jpg)
+
+![How it works](./assets/chrome_EmY3yxj8ad.gif)
