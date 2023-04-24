@@ -1,15 +1,13 @@
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
-import { useGetAllPostsQuery } from 'redux/postsApi';
 import PostPreview from 'components/PostPreview/PostPreview';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-const Carousel = () => {
+const Carousel = ({ posts }) => {
   const [swiperInstance, setSwiperInstance] = useState(null);
-  const { data } = useGetAllPostsQuery('');
 
   return (
     <>
@@ -25,6 +23,7 @@ const Carousel = () => {
               swiperInstance.slidePrev();
             }}
           ></button>
+
           <button
             aria-label="next slide"
             // className={`swiper-button-next ${
@@ -42,14 +41,14 @@ const Carousel = () => {
         spaceBetween={24}
         slidesPerView={3}
         pagination={{
-          clickable: false,
+          clickable: true,
           dynamicBullets: true,
         }}
         onSwiper={setSwiperInstance}
         modules={[Pagination, Navigation]}
       >
-        {data &&
-          data.map(post => {
+        {posts &&
+          posts.map(post => {
             return (
               <SwiperSlide key={post.id}>
                 <PostPreview post={post} />

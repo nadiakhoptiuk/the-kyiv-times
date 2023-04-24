@@ -11,9 +11,9 @@ import CreatePostForm from 'components/CreatePostForm/CreatePostForm';
 const CreatePostModal = ({ open, onClose, title }) => {
   return (
     <Dialog
-      onClose={onClose}
       open={open}
-      title="Please fill form below:"
+      onClose={onClose}
+      title={title}
       aria-label="modal for create new post"
     >
       <DialogTitle sx={{ m: 0, p: 4, position: 'relative', fontSize: '24px' }}>
@@ -23,6 +23,7 @@ const CreatePostModal = ({ open, onClose, title }) => {
           <IconButton
             aria-label="close"
             onClick={onClose}
+            color="primary"
             sx={{
               p: 1.5,
               position: 'absolute',
@@ -38,7 +39,7 @@ const CreatePostModal = ({ open, onClose, title }) => {
         ) : null}
       </DialogTitle>
 
-      <DialogContent dividers sx={{ p: 4 }}>
+      <DialogContent dividers sx={{ p: 4, pt: 2 }}>
         <CreatePostForm onClose={onClose} />
       </DialogContent>
     </Dialog>
