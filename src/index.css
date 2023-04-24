@@ -1,4 +1,4 @@
-@import-normalize; /* bring in normalize.css styles */
+@import 'modern-normalize/modern-normalize.css';
 
 * {
   box-sizing: border-box;
@@ -9,18 +9,30 @@ h1,
 h2,
 h3,
 ul,
+ol,
 li {
   margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  padding: 0;
 }
 
 body {
   margin: 0;
 
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', 'Playfair Display', sans-serif;
+  font-size: 20px;
+  line-height: 1.14;
+  font-weight: 400;
 
   color: var(--black-bg);
+  background-color: var(--white-bg-text);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -29,8 +41,15 @@ body {
 :root {
   --black-bg: #1a1a1a;
   --black-bg-transparent: rgba(26, 26, 26, 0.5);
-  --white-bg-text: #e5e7eb;
-  --grey-border: #e5e5e5;
+  --white-bg-text: #e8eaee;
+  --grey-border: #dad8d8;
+  --input-border-color: rgba(0, 0, 0, 0.42);
+  --input-border-color-hover: rgba(0, 0, 0, 0.87);
+  --bg-input-hover: rgba(0, 0, 0, 0.09);
+  --error-color: #9c3333;
+
+  --accent-color-primary: #1d6e5d;
+  --accent-color-secondary: #55ad9a;
 }
 
 .container {
@@ -39,17 +58,19 @@ body {
   margin: 0 auto;
 }
 
+/*--- SWIPER ---*/
 .swiper {
-  width: 1160px;
+  width: 1150px;
+  height: 200px;
 }
 
 .swiper-slide {
-  width: calc((1160px - 48px) / 3) !important;
-  height: auto;
-  min-height: 150px !important;
+  width: calc((1150px - 48px) / 3) !important;
+  height: 165px;
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
+  overflow: visible;
 }
 
 .swiper-button-prev {
@@ -62,9 +83,12 @@ body {
 
 .swiper-button-prev,
 .swiper-button-next {
-  border: none;
+  top: calc(165px / 2);
+
   background-color: transparent;
-  color: var(--black-bg) !important;
+  color: var(--accent-color-primary) !important;
+
+  border: none;
 }
 
 .swiper-button-prev.swiper-button-disabled,
@@ -73,16 +97,81 @@ body {
 }
 
 .swiper-pagination {
-  bottom: 20px !important;
+  bottom: 10px !important;
 }
 
 .swiper-pagination-bullet {
-  background-color: var(--black-bg) !important;
+  background-color: var(--accent-color-primary) !important;
 }
 
+/*--- MUI STYLES ---*/
 .MuiCardHeader-title {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   display: -webkit-box !important;
+}
+
+.MuiButtonBase-root {
+  display: block !important;
+
+  text-transform: initial !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.MuiDialog-paper {
+  width: 700px;
+  height: 610px;
+  max-width: 700px !important;
+}
+
+.MuiDialogContent-root {
+  width: 700px;
+  max-width: 700px !important;
+
+  border-color: var(--grey-border) !important;
+  background-color: var(--white-bg-text);
+}
+
+.MuiDialog-container .MuiTypography-root {
+  background-color: var(--white-bg-text);
+}
+
+.MuiInputBase-root {
+  background-color: transparent !important;
+  overflow: hidden;
+}
+
+.MuiInputBase-root:hover,
+.MuiInputBase-input:focus {
+  background-color: var(--bg-input-hover) !important;
+}
+
+.MuiInputBase-root::after {
+  display: none !important;
+}
+
+.MuiInputBase-input::placeholder {
+  font-size: 20px !important;
+}
+.MuiInputBase-input.MuiFilledInput-input {
+  font-size: 20px !important;
+}
+
+.MuiCircularProgress-root {
+  width: 60px !important;
+  height: 60px !important;
+  display: block !important;
+  margin: 100px auto 0 auto;
+}
+
+.MuiAlert-icon {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.MuiAlert-icon svg {
+  width: 30px;
+  height: 30px;
 }
