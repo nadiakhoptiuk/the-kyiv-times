@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/the-kyiv-times/static/css/main.97355a02.css",
-    "main.js": "/the-kyiv-times/static/js/main.af81874c.js",
+    "main.css": "/the-kyiv-times/static/css/main.375c7354.css",
+    "main.js": "/the-kyiv-times/static/js/main.383e4415.js",
     "index.html": "/the-kyiv-times/index.html",
-    "main.97355a02.css.map": "/the-kyiv-times/static/css/main.97355a02.css.map",
-    "main.af81874c.js.map": "/the-kyiv-times/static/js/main.af81874c.js.map"
+    "main.375c7354.css.map": "/the-kyiv-times/static/css/main.375c7354.css.map",
+    "main.383e4415.js.map": "/the-kyiv-times/static/js/main.383e4415.js.map"
   },
   "entrypoints": [
-    "static/css/main.97355a02.css",
-    "static/js/main.af81874c.js"
+    "static/css/main.375c7354.css",
+    "static/js/main.383e4415.js"
   ]
 }
