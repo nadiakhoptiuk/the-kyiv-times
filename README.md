@@ -26,9 +26,9 @@ How to run locally:
 
 Some screenshots from the app:
 
-Home Page: [Home Page](./assets/home%20page.jpg)
+Home Page: ![Home Page](./assets/homePage.jpg)
 
 Modal window for creating new post:
-[Modal window for creating new post](./assets/modal.jpg)
+![Modal window for creating new post](./assets/modal.jpg)
 
-Post Page: [Post Page](./assets/post%20page.jpg)
+Post Page: ![Post Page](./assets/postPage.jpg)
