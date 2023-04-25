@@ -26,9 +26,9 @@ their computer.
 
 ### How to run the app locally:
 
-_**1.**_ Clone this repo to the computer;
+_**1.**_ Clone this repo to the computer or download a zip and unpack the archive;
 
-_**2.**_ Install all dependencies using a command "npm install";
+_**2.**_ Install all dependencies at terminal using a command "npm install";
 
 _**3.**_ Run the app using a command "npm start";
 
