@@ -1,7 +1,7 @@
-import Carousel from 'components/Carousel/Carousel';
-import CreatePostBtn from 'components/CreatePostBtn/CreatePostBtn';
-import Spinner from 'components/Spinner/Spinner';
 import { useGetAllPostsQuery } from 'redux/postsApi';
+import Carousel from 'components/Carousel';
+import CreatePostBtn from 'components/CreatePostBtn';
+import Spinner from 'components/Spinner';
 import s from './HomeView.module.css';
 
 const HomeView = () => {

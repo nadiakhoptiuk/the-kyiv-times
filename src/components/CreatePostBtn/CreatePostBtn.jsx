@@ -1,6 +1,6 @@
 import useLocalStorage from 'hooks/useLocalStorage';
 import { Button } from '@mui/material';
-import CreatePostModal from 'components/CreatePostModal/CreatePostModal';
+import CreatePostModal from 'components/CreatePostModal';
 
 const CreatePostBtn = () => {
   const [open, setOpen] = useLocalStorage('isModalOpen', false);

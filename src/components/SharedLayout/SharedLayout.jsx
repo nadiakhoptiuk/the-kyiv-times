@@ -1,6 +1,8 @@
+import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import Footer from 'components/Footer/Footer';
-import Header from 'components/Header/Header';
+import Header from './Header';
+import Footer from './Footer';
+import Spinner from 'components/Spinner';
 import s from './SharedLayout.module.css';
 
 const SharedLayout = () => {
@@ -9,7 +11,11 @@ const SharedLayout = () => {
       <Header />
 
       <main>
-        <Outlet />
+        <Suspense fallback={<Spinner />}>
+          <div>
+            <Outlet />
+          </div>
+        </Suspense>
       </main>
 
       <Footer />

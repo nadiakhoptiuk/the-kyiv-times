@@ -1,7 +1,7 @@
-import PostInfo from 'components/PostInfo/PostInfo';
-import Spinner from 'components/Spinner/Spinner';
 import { useParams } from 'react-router';
 import { useGetPostInfoByIdQuery } from 'redux/postsApi';
+import PostInfo from 'components/PostInfo';
+import Spinner from 'components/Spinner';
 import s from './PostView.module.css';
 
 const PostView = () => {

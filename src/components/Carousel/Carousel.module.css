@@ -1,0 +1,19 @@
+.swiperBtnPrev,
+.swiperBtnNext {
+  position: absolute;
+  width: 32px;
+  height: 100px;
+  top: 32px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.swiperBtnNext {
+  right: 30px;
+}
+
+.swiperBtnPrev {
+  left: 32px;
+}

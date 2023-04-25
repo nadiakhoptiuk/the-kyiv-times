@@ -1,15 +1,17 @@
-import { useForm, Controller } from 'react-hook-form';
-import { Alert, Button, TextField } from '@mui/material';
-import { useAddNewPostMutation } from 'redux/postsApi';
-import s from './CreatePostForm.module.css';
 import { useEffect } from 'react';
+import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { Alert, Button, TextField } from '@mui/material';
+import PropTypes from 'prop-types';
+import { useAddNewPostMutation } from 'redux/postsApi';
 import validationSchema from 'service/validationSchema';
-import Spinner from 'components/Spinner/Spinner';
+import Spinner from 'components/Spinner';
+import s from './CreatePostForm.module.css';
 
 const CreatePostForm = ({ onClose }) => {
   const [addNewPost, { isLoading, isSuccess, isFetching, isError }] =
     useAddNewPostMutation();
+
   const {
     control,
     register,
@@ -113,3 +115,7 @@ const CreatePostForm = ({ onClose }) => {
 };
 
 export default CreatePostForm;
+
+CreatePostForm.propTypes = {
+  onClose: PropTypes.func.isRequired,
+};

@@ -1,7 +1,8 @@
-import { Button } from '@mui/material';
-import CommentsBlock from 'components/PostPreview/CommentsBlock';
 import { useNavigate } from 'react-router-dom';
+import { Button } from '@mui/material';
+import PropTypes from 'prop-types';
 import { useGetUserByIdQuery } from 'redux/postsApi';
+import CommentsBlock from 'components/PostPreview/CommentsBlock';
 import s from './PostInfo.module.css';
 
 const PostInfo = ({ post }) => {
@@ -39,3 +40,12 @@ const PostInfo = ({ post }) => {
 };
 
 export default PostInfo;
+
+PostInfo.propTypes = {
+  post: PropTypes.shape({
+    body: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    userId: PropTypes.number.isRequired,
+  }).isRequired,
+};
