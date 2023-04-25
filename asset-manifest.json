@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/the-kyiv-times/static/css/main.e2e3ca85.css",
-    "main.js": "/the-kyiv-times/static/js/main.383e4415.js",
+    "main.css": "/the-kyiv-times/static/css/main.a1c14c0f.css",
+    "main.js": "/the-kyiv-times/static/js/main.2737d727.js",
+    "static/css/546.3f58b642.chunk.css": "/the-kyiv-times/static/css/546.3f58b642.chunk.css",
+    "static/js/546.e6e94a29.chunk.js": "/the-kyiv-times/static/js/546.e6e94a29.chunk.js",
     "index.html": "/the-kyiv-times/index.html",
-    "main.e2e3ca85.css.map": "/the-kyiv-times/static/css/main.e2e3ca85.css.map",
-    "main.383e4415.js.map": "/the-kyiv-times/static/js/main.383e4415.js.map"
+    "main.a1c14c0f.css.map": "/the-kyiv-times/static/css/main.a1c14c0f.css.map",
+    "main.2737d727.js.map": "/the-kyiv-times/static/js/main.2737d727.js.map",
+    "546.3f58b642.chunk.css.map": "/the-kyiv-times/static/css/546.3f58b642.chunk.css.map",
+    "546.e6e94a29.chunk.js.map": "/the-kyiv-times/static/js/546.e6e94a29.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2e3ca85.css",
-    "static/js/main.383e4415.js"
+    "static/css/main.a1c14c0f.css",
+    "static/js/main.2737d727.js"
   ]
 }
