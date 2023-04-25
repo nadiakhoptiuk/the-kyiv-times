@@ -17,6 +17,22 @@ An addition, users can create their own post by clicking to the **"Create a new
 post"** button. They'll see a modal window with form and validation, which can
 allows them to fill info about new post.
 
+### Used technologies
+
+**Frontend:**
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
+![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white)
+
+**Fake Backend:**
+
+[JSONPlaceholder](https://jsonplaceholder.typicode.com/)
+
 ---
 
 Users can either view the app at its production link or run the app locally on
@@ -28,7 +44,7 @@ their computer.
 
 _**1.**_ Clone this repo to the computer or download a zip and unpack the archive;
 
-_**2.**_ Open the folder at VSCode, install all dependencies at terminal using a command **"npm install"** or **"npm i"**;
+_**2.**_ Open the folder at VSCode, install all dependencies using a command **"npm install"** or **"npm i"** at terminal;
 
 _**3.**_ Run the app using a command **"npm start"**;
 
