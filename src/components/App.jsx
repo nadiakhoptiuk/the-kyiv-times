@@ -1,7 +1,10 @@
+import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import HomeView from 'views/HomeView/HomeView';
-import PostView from 'views/PostView/PostView';
-import SharedLayout from './SharedLayout/SharedLayout';
+import HomeView from 'views/HomeView';
+import SharedLayout from './SharedLayout';
+
+// const HomeView = lazy(() => import('views/HomeView'));
+const PostView = lazy(() => import('views/PostView'));
 
 export const App = () => {
   return (

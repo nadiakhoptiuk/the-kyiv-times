@@ -1,6 +1,7 @@
 import { List, ListItem, ListItemText } from '@mui/material';
-import Spinner from 'components/Spinner/Spinner';
+import PropTypes from 'prop-types';
 import { useGetCommentsByPostIdQuery } from 'redux/postsApi';
+import Spinner from 'components/Spinner';
 import s from './PostPreview.module.css';
 
 const CommentsBlock = ({ id, height, scroll }) => {
@@ -35,3 +36,9 @@ const CommentsBlock = ({ id, height, scroll }) => {
 };
 
 export default CommentsBlock;
+
+CommentsBlock.propTypes = {
+  id: PropTypes.number.isRequired,
+  height: PropTypes.string.isRequired,
+  scroll: PropTypes.string.isRequired,
+};

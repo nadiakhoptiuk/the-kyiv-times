@@ -1,12 +1,7 @@
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  IconButton,
-  // Typography,
-} from '@mui/material';
+import PropTypes from 'prop-types';
+import { Dialog, DialogContent, DialogTitle, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import CreatePostForm from 'components/CreatePostForm/CreatePostForm';
+import CreatePostForm from 'components/CreatePostForm';
 
 const CreatePostModal = ({ open, onClose, title }) => {
   return (
@@ -47,3 +42,9 @@ const CreatePostModal = ({ open, onClose, title }) => {
 };
 
 export default CreatePostModal;
+
+CreatePostModal.propTypes = {
+  open: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+};

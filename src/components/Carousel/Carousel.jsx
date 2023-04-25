@@ -1,10 +1,14 @@
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
-import PostPreview from 'components/PostPreview/PostPreview';
+import PropTypes from 'prop-types';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import PostPreview from 'components/PostPreview';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import s from './Carousel.module.css';
 
 const Carousel = ({ posts }) => {
   const [swiperInstance, setSwiperInstance] = useState(null);
@@ -15,25 +19,23 @@ const Carousel = ({ posts }) => {
         <>
           <button
             aria-label="previous slide"
-            // className={`swiper-button-prev ${
-            //   isBeginning ? 'swiper-button-disabled' : ''
-            //   }`}
-            className="swiper-button-prev"
+            className={s.swiperBtnPrev}
             onClick={() => {
               swiperInstance.slidePrev();
             }}
-          ></button>
+          >
+            <ArrowBackIosIcon color="primary" fontSize="large" />
+          </button>
 
           <button
             aria-label="next slide"
-            // className={`swiper-button-next ${
-            //   swiperInstance.activeIndex() ? 'swiper-button-disabled' : ''
-            // }`}
-            className="swiper-button-next"
+            className={s.swiperBtnNext}
             onClick={() => {
               swiperInstance.slideNext();
             }}
-          ></button>
+          >
+            <ArrowForwardIosIcon color="primary" fontSize="large" />
+          </button>
         </>
       ) : null}
 
@@ -61,3 +63,14 @@ const Carousel = ({ posts }) => {
 };
 
 export default Carousel;
+
+Carousel.propTypes = {
+  posts: PropTypes.arrayOf(
+    PropTypes.shape({
+      body: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      userId: PropTypes.number.isRequired,
+    }).isRequired
+  ),
+};

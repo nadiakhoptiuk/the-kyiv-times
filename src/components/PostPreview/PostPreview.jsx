@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { CardActions, CardContent, CardHeader, Collapse } from '@mui/material';
 import Card from '@mui/material/Card';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import PropTypes from 'prop-types';
 import ExpandMore from './ExpandMore';
 import CommentsBlock from './CommentsBlock';
 import s from './PostPreview.module.css';
@@ -60,3 +61,12 @@ const PostPreview = ({ post }) => {
 };
 
 export default PostPreview;
+
+PostPreview.propTypes = {
+  post: PropTypes.shape({
+    body: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    userId: PropTypes.number.isRequired,
+  }).isRequired,
+};
